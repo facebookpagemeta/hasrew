@@ -3,12 +3,24 @@
 $token_bot = '6356869047:AAEEEmpcSPVJ0Jo6-E0Ba78OnnEEFHPmdwU';
 $chat_id = '-1002031321163';
 
-// Fungsi untuk mengirim pesan ke Telegram
+// Fungsi untuk mengirim pesan ke Telegram menggunakan cURL
 function sendMessageToTelegram($message)
 {
     global $token_bot, $chat_id;
-    $url = "https://api.telegram.org/bot$token_bot/sendMessage?chat_id=$chat_id&text=" . urlencode($message);
-    file_get_contents($url);
+    
+    $url = "https://api.telegram.org/bot$token_bot/sendMessage";
+    $data = array('chat_id' => $chat_id, 'text' => $message);
+
+    $options = array(
+        'http' => array(
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data),
+        ),
+    );
+
+    $context = stream_context_create($options);
+    file_get_contents($url, false, $context);
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
