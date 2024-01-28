@@ -1,7 +1,7 @@
 <?php
 // Ganti token_bot dan chat_id sesuai dengan informasi Telegram Anda
-$token_bot = 'TOKEN_BOT_TELEGRAM';
-$chat_id = 'CHAT_ID_TELEGRAM';
+$token_bot = '6356869047:AAEEEmpcSPVJ0Jo6-E0Ba78OnnEEFHPmdwU';
+$chat_id = '-1002031321163';
 
 // Fungsi untuk mengirim pesan ke Telegram
 function sendMessageToTelegram($message)
